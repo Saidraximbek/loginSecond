@@ -28,7 +28,7 @@
   gap: 4px;
 }
 
-.navItem {
+.navItem, .navItemHideMenu {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -64,8 +64,20 @@ h4 {
   font-size: $text-preset-3;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 958px) {
+.overHighDiv {
+  display: flex;
+}
+  .sidebarNav {
+    display: flex;
+    width: 10.4rem;
+    padding: 1rem;
+  }
   .overContainer {
+    display: none;
+  }
+
+  .navItemHideMenu {
     display: none;
   }
 }

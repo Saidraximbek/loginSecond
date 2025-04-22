@@ -1,1 +1,128 @@
 @use "../../scss/variables" as *;
+
+.overviewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3.5rem;
+
+  width: 100%;
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+.overTitle {
+  font-size: $text-preset-1;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.overviewContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  width: 100%;
+}
+
+.overAmounts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2.4rem;
+}
+
+.overAmountsItem {
+  height: 11.9rem;
+  background-color: $white;
+  width: 100%;
+  max-width: 33.733rem;
+  border-radius: $spacing-150;
+  display: flex;
+  padding: 2.4rem;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-direction: column;
+  font-size: $text-preset-4;
+  line-height: 150%;
+  color: $grey-500;
+}
+
+.overAmountsItem:first-child {
+  background-color: $grey-900;
+  color: $white;
+}
+
+.currentBalance {
+  font-size: $text-preset-1;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.overAllInfos {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.potsTran {
+    width: 100%;
+    max-width: 608px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.budgetBills {
+    width: 100%;
+    max-width: 428px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.pots {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 3.2rem;
+    background-color: $white;
+    border-radius: $spacing-150;
+}
+
+.potsTitleView {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.potsTitle {
+    font-size: $text-preset-2;
+    font-weight: 700;
+}
+
+.viewPots {
+    display: flex;
+    align-items: center;
+    font-size: $text-preset-4;
+    gap: 1.2rem;
+    color: $grey-500;
+}
+
+@media screen and (max-width: 703px) {
+  .currentBalance {
+    font-size: $text-preset-3;
+  }
+}
+@media screen and (max-width: 470px) {
+  .overAmounts {
+    flex-direction: column;
+  }
+
+  .currentBalance {
+    font-size: $text-preset-1;
+  }
+}
+
