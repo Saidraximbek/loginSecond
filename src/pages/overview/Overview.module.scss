@@ -111,6 +111,86 @@
     color: $grey-500;
 }
 
+.potsContent {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+.potsContentItem {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.potsContentItem:first-child {
+  width: 100%;
+  max-width: 24.7rem;
+  background-color: $beige-100;
+  padding: 1.6rem 2rem;
+  border-radius: $spacing-150;
+}
+
+.potsContentItem:first-child .itemInto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.itemIntoTotalSaved {
+  font-size: $text-preset-4;
+  line-height: 150%;
+  color: $grey-500;
+}
+
+.itemIntoTotalSavedAmount {
+  font-size: $text-preset-1;
+  font-weight: 700;
+  color: $grey-900;
+}
+
+
+
+.potsContentItem:last-child {
+  flex-wrap: wrap;
+}
+
+.itemIntoLine {
+  height: 4.3rem;
+  width: $spacing-50;
+  border-radius: $spacing-150;
+  background-color: $green;
+}
+
+
+
+.itemIntoDiv {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 13.05rem;
+}
+
+.itemIntoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.itemIntoTotalSavedSecond {
+  font-size: $text-preset-5;
+  line-height: 150%;
+  color: $grey-500;
+}
+
+.itemIntoTotalSavedAmountSecond {
+  font-size: $text-preset-4;
+  font-weight: 700;
+  line-height: 150%;
+}
+
 @media screen and (max-width: 703px) {
   .currentBalance {
     font-size: $text-preset-3;
