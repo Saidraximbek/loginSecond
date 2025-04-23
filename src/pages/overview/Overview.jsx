@@ -125,7 +125,32 @@ const Overview = () => {
 
           <div className={style.budgetBills}>
             <div className={style.budgets}>budget</div>
-            <div className={style.bills}>bills</div>
+
+            <div className={style.bills}>
+            <div className={style.billsTitleView}>
+                <h2 className={style.potsTitle}>Transactions</h2>
+                <NavLink to="/transactions">
+                  <p className={style.viewPots}>
+                    See Details <FaCaretRight />
+                  </p>
+                </NavLink>
+              </div>
+
+              <ul className={style.billsList}>
+                  <li className={style.billsItem}>
+                    <p className={style.billsItemName}>Paid Bills</p>
+                    <p className={style.billsItemAmount}>$190.00</p>
+                  </li>
+                  <li className={style.billsItem}>
+                    <p className={style.billsItemName}>Total Upcoming</p>
+                    <p className={style.billsItemAmount}>$194.98</p>
+                  </li>
+                  <li className={style.billsItem}>
+                    <p className={style.billsItemName}>Due Soon</p>
+                    <p className={style.billsItemAmount}>$59.98</p>
+                  </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
