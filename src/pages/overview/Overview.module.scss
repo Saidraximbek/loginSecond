@@ -63,6 +63,7 @@
     display: flex;
     align-items: center;
     gap: 2.4rem;
+    height: 100%;
 }
 
 .potsTran {
@@ -71,6 +72,7 @@
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    height: 100%;
 }
 
 .budgetBills {
@@ -88,6 +90,7 @@
     width: 100%;
     padding: 3.2rem;
     background-color: $white;
+    height: 100%;
     border-radius: $spacing-150;
 }
 
@@ -96,6 +99,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
 }
 
 .potsTitle {
@@ -191,6 +195,52 @@
   line-height: 150%;
 }
 
+.tranList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.2rem;
+}
+
+.tranListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px $grey-100 solid;
+}
+
+.tranItemPer img {
+  border-radius: 50%;
+}
+
+.tranItemPer {
+  display: flex;
+  align-items: center;
+  font-size: $text-preset-3;
+  font-weight: 700;
+  color: $grey-900;
+  gap: 1.6rem;
+}
+
+.tranItemSec {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  gap: 0.8rem;
+}
+
+.tranItemSecAmount {
+  font-size: $text-preset-4;
+  font-weight: 700;
+}
+
+.tranItemDate {
+  font-size: $text-preset-5;
+  color: $grey-500;
+}
+
 @media screen and (max-width: 703px) {
   .currentBalance {
     font-size: $text-preset-3;
@@ -204,5 +254,10 @@
   .currentBalance {
     font-size: $text-preset-1;
   }
+}
+@media screen and (max-width: 703px) {
+.overAllInfos {
+  flex-direction: column;
+}
 }
 

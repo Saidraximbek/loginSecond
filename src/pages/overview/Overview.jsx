@@ -55,21 +55,72 @@ const Overview = () => {
                 </li>
 
                 <li className={style.potsContentItem}>
-                   {data && data.pots.slice(0,4).map((d)=>{
-                     return <div className={style.itemIntoDiv}>
-                      <div className={style.itemIntoLine}></div>
-                      <div className={style.itemIntoContent}>
-                      <p className={style.itemIntoTotalSavedSecond}>{d.name}</p>
-                      <h5 className={style.itemIntoTotalSavedAmountSecond}>${d.total}</h5>
-                      </div>
-                   </div>
-                   })}
-                  
+                  {data &&
+                    data.pots.slice(0, 4).map((d) => {
+                      return (
+                        <div className={style.itemIntoDiv}>
+                          <div className={style.itemIntoLine}></div>
+                          <div className={style.itemIntoContent}>
+                            <p className={style.itemIntoTotalSavedSecond}>
+                              {d.name}
+                            </p>
+                            <h5
+                              className={style.itemIntoTotalSavedAmountSecond}
+                            >
+                              ${d.total}
+                            </h5>
+                          </div>
+                        </div>
+                      );
+                    })}
                 </li>
               </ul>
             </div>
             {/* pots end */}
-            <div className={style.tran}>tran</div>
+            <div className={style.pots}>
+              <div className={style.potsTitleView}>
+                <h2 className={style.potsTitle}>Transactions</h2>
+                <NavLink to="/transactions">
+                  <p className={style.viewPots}>
+                    See Details <FaCaretRight />
+                  </p>
+                </NavLink>
+              </div>
+
+              <ul className={style.tranList}>
+                {data &&
+                  data.transactions.map((t) => {
+                    return (
+                      <li key={t.id} className={style.tranListItem}>
+                        <div className={style.tranItemPer}>
+                          <img src={t.avatar} alt={t.name} width={40} />
+                          <h5>{t.name}</h5>
+                        </div>
+                        <div className={style.tranItemSec}>
+                          <div className={style.tranItemSecAmount}>
+                            {t.amount < 0 ? (
+                              <p style={{ color: "black" }}>
+                                -${Math.abs(t.amount)}
+                              </p>
+                            ) : (
+                              <p style={{ color: "green" }}>+${t.amount}</p>
+                            )}
+                          </div>
+
+                          {/* date */}
+                          <p className={style.tranItemDate}>
+                            {new Date(t.date).toLocaleDateString("en-GB", {
+                              day: "2-digit",
+                              month: "short",
+                              year: "numeric",
+                            })}
+                          </p>
+                        </div>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </div>
           </div>
 
           <div className={style.budgetBills}>
