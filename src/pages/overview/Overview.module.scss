@@ -251,7 +251,13 @@
   width: 100%;
   max-width: 780px;
   height: 40rem;
-  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  flex-direction: column;
+  padding: 2.4rem;
+  border-radius: $spacing-150;
 }
 
 .bills {
@@ -313,7 +319,7 @@
     font-size: $text-preset-1;
   }
 }
-@media screen and (max-width: 703px) {
+@media screen and (max-width: 848px) {
 .overAllInfos {
   flex-direction: column;
 }

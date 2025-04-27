@@ -5,11 +5,9 @@ import style from "./Sidebar.module.scss";
 const Sidebar = () => {
   return (
     <div className={style.overContainer}>
-      <img
-        src="./images/logo-large.svg"
-        alt="Logo"
-        className={style.overLogo}
-      />
+      <img src="./images/logo-large.svg" alt="Logo" className={style.logoLarge} />
+<img src="./images/logo-small.svg" alt="Logo Small" className={style.logoSmall} />
+
       <div className={style.overHighDiv}>
         <div className={style.sidebarNav}>
           <NavLink
@@ -130,7 +128,7 @@ const Sidebar = () => {
           </NavLink>
         </div>
 
-        <NavLink
+        {/* <NavLink
           to="/"
           className={style.navItemHideMenu}
           style={{
@@ -151,7 +149,7 @@ const Sidebar = () => {
             </svg>
             <h4>Minimize Menu</h4>
           </div>
-        </NavLink>
+        </NavLink> */}
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import style from "./Overview.module.scss";
 import { useCollectionsData } from "../../hooks/useCollectionsData";
 import { FaCaretRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { Chart } from "../../components/Chart";
 const Overview = () => {
   const { data, isPending } = useCollectionsData();
   console.log(data);
@@ -107,7 +108,7 @@ const Overview = () => {
                             )}
                           </div>
 
-                          {/* date */}
+                          
                           <p className={style.tranItemDate}>
                             {new Date(t.date).toLocaleDateString("en-GB", {
                               day: "2-digit",
@@ -124,12 +125,23 @@ const Overview = () => {
           </div>
 
           <div className={style.budgetBills}>
-            <div className={style.budgets}>budget</div>
+            
+            <div className={style.budgets}>
+            <div className={style.potsTitleView}>
+                <h2 className={style.potsTitle}>Budgets</h2>
+                <NavLink to="/budgets">
+                  <p className={style.viewPots}>
+                    See Details <FaCaretRight />
+                  </p>
+                </NavLink>
+              </div>
+             {data && <Chart budgets={data.budgets}/>}
+            </div>
 
             <div className={style.bills}>
             <div className={style.billsTitleView}>
-                <h2 className={style.potsTitle}>Transactions</h2>
-                <NavLink to="/transactions">
+                <h2 className={style.potsTitle}>Recurring Bills</h2>
+                <NavLink to="/recurringBills">
                   <p className={style.viewPots}>
                     See Details <FaCaretRight />
                   </p>
