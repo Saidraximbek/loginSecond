@@ -18,16 +18,22 @@ const Register = () => {
   return (
     <div className={style.registerContainer}>
  
-      <div className={style.finance}>
-        <img src="./images/logo-large.svg" alt="Financy logo" />
-      </div>
+          <div className={style.finance}>
+            <img src="./images/logo-large.svg" alt="Financy logo" />
+            <div>
+              <h4>Keep track of your money and save for your future</h4>
+              <p>
+                Personal finance app puts you in control of your spending. Track
+                transactions, set budgets, and add to savings pots easily.
+              </p>
+            </div>
+          </div>
+      <div className={style.financed}>
+      <img src="./images/logo-large.svg" alt="Financy logo" />
+      </div> 
 
  
-      <img
-        src="./images/Sidebar.png"
-        alt="Illustration"
-        className={style.registerHeroImg}
-      />
+    
 
      
       <div className={style.registerInputs}>

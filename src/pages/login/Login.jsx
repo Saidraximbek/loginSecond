@@ -3,7 +3,7 @@ import style from "./Login.module.scss";
 import { Link } from "react-router-dom";
 import { useLogin } from "../../hooks/useLogin";
 const Login = () => {
-  const {data, isPending, signIn} = useLogin()
+  const { data, isPending, signIn } = useLogin();
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -17,14 +17,18 @@ const Login = () => {
     <div className={style.loginContainer}>
       <div className={style.finance}>
         <img src="./images/logo-large.svg" alt="Financy logo" />
+        <div>
+          <h4>Keep track of your money and save for your future</h4>
+          <p>
+            Personal finance app puts you in control of your spending. Track
+            transactions, set budgets, and add to savings pots easily.
+          </p>
+        </div>
       </div>
-
-      <img
-        src="./images/Sidebar.png"
-        alt="Illustration"
-        className={style.loginHeroImg}
-      />
-
+  <div className={style.financed}>
+  <img src="./images/logo-large.svg" alt="Financy logo" />
+  </div>
+     
       <div className={style.loginInputs}>
         <h2 className={style.loginTitle}>Login</h2>
 
@@ -39,12 +43,16 @@ const Login = () => {
             <input id="password" type="password" name="password" required />
           </div>
 
-          {!isPending && <button type="submit" className={style.loginBtn}>
-            Login
-          </button>}
-          {isPending && <button type="submit" className={style.loginBtn}>
-            Loading...
-          </button>}
+          {!isPending && (
+            <button type="submit" className={style.loginBtn}>
+              Login
+            </button>
+          )}
+          {isPending && (
+            <button type="submit" className={style.loginBtn}>
+              Loading...
+            </button>
+          )}
         </form>
 
         <div className={style.loginToNext}>
