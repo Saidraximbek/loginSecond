@@ -2,8 +2,11 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../components/sidebar/Sidebar";
 import style from "./MainLayout.module.scss";
 import NavBottom from "../components/navbottom/NavBottom";
+import { useState } from "react";
 
 const MainLayout = () => {
+
+  
   return (
     <div className={style.mainContainer}>
       <div className={style.sidebarWrapper}>
