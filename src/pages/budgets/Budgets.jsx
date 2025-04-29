@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import BudgetAddModal from '../../components/BudgetAddModal/BudgetAddModal.jsx'
 import style from "./Budgets.module.scss"
-import { Chart } from "../../components/Chart";
-import { useCollectionsData } from '../../hooks/useCollectionsData'
 const Budgets = () => {
-  const {data} = useCollectionsData()
+  const [openmodal, setOpenModal] = useState(false)
   return (
-    <div>
-      {data && <Chart budgets={data.budgets}/>}
+    <div className={style.budgetsContainer}>
+      <div className={style.budgetsAddTitle}>
+        <h2 className={style.budgetsTitle}>Budgets</h2>
+        <button className={style.budgetsBtn} onClick={()=>setOpenModal(true)}>+ Add New Budget</button>
+       {openmodal && <BudgetAddModal setOpenModal={setOpenModal} />}
+        
+      </div>
     </div>
   )
 }

@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+
+.budgetsContainer {
+    margin-top: 3.4rem;
+    width: 100%;
+}
+
+.budgetsAddTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.budgetsTitle {
+    font-size: $text-preset-1;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.budgetsBtn {
+    width: 15.4rem;
+    height: 5.3rem;
+    background-color: $grey-900;
+    border-radius: $spacing-100;
+    padding: $spacing-200;
+    color: $white;
+    font-family: inherit;
+}

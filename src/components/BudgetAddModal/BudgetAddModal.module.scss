@@ -1,0 +1,157 @@
+@import "../../scss/variables";
+
+.addModalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+}
+
+.overflow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 100;
+}
+
+.modalContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  z-index: 101;
+  background-color: white;
+  padding: 3.2rem;
+  width: 100%;
+  max-width: 56rem;
+  height: 49rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.modalContent.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modalheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalTitle {
+  font-size: $text-preset-1;
+}
+
+.modalSubtitle {
+  color: $grey-500;
+  font-size: $text-preset-4;
+  line-height: 150%;
+}
+
+.budgetForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  label {
+    font-size: $text-preset-5;
+    color: $grey-500;
+    font-weight: 700;
+  }
+}
+
+.selectInput,
+.currencyInput input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.4rem;
+  width: 100%;
+  outline: none;
+}
+
+.selectInput {
+  appearance: none;
+  background: url("/images/icon-caret-down.svg") no-repeat right 1.2rem center;
+  background-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  option {
+    border-bottom: solid 1px $grey-100;
+    padding-bottom: 1.2rem;
+  }
+}
+
+.currencyInput {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding-left: 1.2rem;
+
+  span {
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+    color: #555;
+  }
+
+  input {
+    border: none;
+    flex-grow: 1;
+    font-size: 1.4rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.themeSelect {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .colorCircle {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  select {
+    flex-grow: 1;
+    border: none;
+    font-size: 1.4rem;
+    background: transparent;
+    outline: none;
+  }
+}
+
+.submitBtn {
+  height: 5.3rem;
+  background-color: $grey-900;
+  color: $white;
+  border: 0;
+  border-radius: $spacing-150;
+}
